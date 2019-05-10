@@ -1,0 +1,222 @@
+:root {
+    --task-width: 48px;
+    --task-height: 42px;
+    --hover-color: rgba(255, 255, 255, 0.2);
+    --top-bar-height: 30px;
+}
+
+body {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif
+}
+
+.screen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://www.setaswall.com/wp-content/uploads/2017/05/Windows-10-Wallpapers-06-1920-x-1080.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+
+
+/* ================================================================================================== */
+/* TASKBAR                                                                                            */
+/* ================================================================================================== */
+.taskbar {
+    position: fixed;
+    display: inline-flex;
+    flex-direction: row;
+    width: 100%;
+    height: var(--task-height);
+    bottom: 0!important;
+    left: 0!important;
+    right: 0!important;
+    color: white;
+    background-color: rgba(0, 0, 10, 0.7);
+}
+
+
+/* MENU --------------------------------------------------------------------------------------------- */
+.menu {
+    position: relative;
+    width: var(--task-width);
+    height: var(--task-height);
+    line-height: var(--task-height);
+    text-align: center;
+    margin-right: 3px;
+    font-size: 18px;
+}
+
+.menu i {
+    width: var(--task-width);
+    height: var(--task-height);
+    line-height: var(--task-height);
+    text-align: center;
+    font-size: 20px;
+}
+
+.menu :hover {
+    background: var(--hover-color);
+}
+
+
+/* -- BACKGROUND TASK ----------------------------------------------------------------------------------- */
+.background-task-container {
+    position: relative;
+    display: inline-flex;
+    flex-direction: row;
+    background-color: rgba(255,255,255,0.2);
+}
+
+.background-task {
+    position: relative;
+}
+
+
+/* -- TASK ------------------------------------------------------------------------------------------ */
+.task-container {
+    width: 100%;
+}
+
+.task {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    width: var(--task-width);
+    height: calc(var(--task-height) - 3px);
+    line-height: var(--task-height);
+    text-align: center;
+    font-size: 18px;
+    pointer-events: all;
+}
+
+.task i {
+    width: var(--task-width);
+    height: var(--task-height);
+    line-height: var(--task-height);
+    text-align: center;
+    font-size: 20px;
+}
+
+.task-border {
+    position: relative;
+    width: calc(var(--task-width) - 8px);
+    bottom: 2px;
+    border-bottom: 2px solid lightblue;
+}
+
+.task :hover {
+    background: var(--hover-color);
+}
+
+.task > .task-border :hover {
+    width: var(--task-width);
+}
+
+.task-selected {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+/* -- DESKTOP BUTTON ----------------------------------------------------------------------------------- */
+.desktop-button {
+    width: 4px;
+    height: 100%;
+    border-left: 1px solid rgba(255,255,255,0.3);
+}
+
+.desktop-button :hover {
+    background-color: var(--hover-color);
+}
+
+
+
+
+/* ================================================================================================== */
+/* WINDOW                                                                                             */
+/* ================================================================================================== */
+.window {
+    position: absolute;
+    top: 64px;
+    left: 64px;
+    width: 800px;
+    height: 600px;
+    background-color: white;
+    border: 0.1px solid rgba(255,255,255,0.2);
+    box-shadow: 0px 0px 35px -16px rgba(0,0,0,0.75);
+}
+
+.window-expanded {
+    width: 100%;
+    height: calc(100% - var(--task-height));
+    top: 0;
+    left: 0;
+}
+
+.window-bar {
+    position: relative;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: var(--top-bar-height);
+    top: 0px;
+    background-color: white;
+}
+
+.window-bar-title {
+    height: var(--top-bar-height);
+    line-height: var(--top-bar-height);
+    text-align: left;
+    font-size: 12px;
+    margin-left: 8px;
+    white-space: nowrap;
+}
+
+.window-bar i {
+    margin-right: 8px;
+}
+
+.window-control-container {
+    position: relative;
+    display: inline-flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    height: var(--top-bar-height);
+    line-height: var(--top-bar-height);
+    color: rgba(0,0,0,0.75);
+    font-size: 12px;
+}
+
+.window-control {
+    width: 48px;
+    height: var(--top-bar-height);
+    line-height: var(--top-bar-height);
+}
+
+.window-control i {
+    width: 48px;
+    height: var(--top-bar-height);
+    line-height: var(--top-bar-height);
+    text-align: center;
+}
+
+.window-control :hover {
+    background-color: rgba(0,0,0,0.1);
+}
+
+.window-control-close :hover {
+    background-color: red;
+    color: white;
+}

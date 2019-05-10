@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WebOS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    <script src="index.js"></script>
+</head>
+
+<body>
+
+    <!-- Screen -->
+    <div class="screen" id="screen">
+
+        <div id="focusedWindow" class="window">
+            <div class="window-bar" onclick="focus(this)">
+                <span class="window-bar-title">
+                    <i class="fab fa-chrome"></i>
+                    Google Chrome
+                </span>
+                <div class="window-control-container">
+                    <div class="window-control window-control-close" onclick="closeFocused()">
+                        <i class="window-control-close fas fa-times"></i>
+                    </div>
+                    <div class="window-control" onclick="expandFocused();">
+                        <i class="window-control far fa-square"></i>
+                    </div>
+                    <div class="window-control" onclick="hideFocused()">
+                        <i class="window-control fas fa-minus"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Taskbar -->
+        <div class="taskbar">
+
+            <!-- Taskbar Menu -->
+            <div class="menu">
+                <i class="fab fa-windows"></i>
+            </div>
+
+            <!-- Taskbar Container-->
+            <div class="task-container" id="taskbarContainer">
+
+                <!-- Example tasks
+                <div class="task" id="chrome" onclick="select(this)">
+                    <i class="fab fa-chrome"></i>
+                    <div class="task-border"></div>
+                </div>
+
+                
+                <div class="task" id="battle.net" onclick="select(this)">
+                    <i class="fab fa-battle-net"></i>
+                    <div class="task-border"></div>
+                </div>
+                -->
+
+            </div>
+
+            <!-- Background Task Container -->
+            <div class="background-task-container">
+
+            </div>
+
+            <!-- Desktop Button -->
+            <div class="desktop-button"></div>
+
+        </div>
+    </div>
+</body>
+
+</html>
